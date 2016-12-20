@@ -1,0 +1,208 @@
+<html>
+<head>
+  <title>Tribute to CM Burns</title>
+
+  <!-- Material Design fonts -->
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <!-- Bootstrap -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!--Font Awesome -->
+  <link rel="stylesheet" href="fa/css/font-awesome.min.css">
+
+  <!-- Bootstrap Material Design -->
+  <link rel="stylesheet" type="text/css" href="material/dist/css/bootstrap-material-design.css">
+  <link rel="stylesheet" type="text/css" href="material/dist/css/ripples.min.css">
+
+  <link rel='stylesheet' type='text/css' href='css/burns.css' />
+  <style>
+
+  </style>
+
+</head>
+
+<body>
+
+<div class="container container-fluid">
+
+  <div class='jumbotron' id="header">
+    <h2> Tribute to C.M. Burns </h2>
+    <p>
+      <a href='https://www.youtube.com/watch?v=_p_FHTV2RSA' style='color:"white"'> Mr. Snrub redirects here </a>
+    </p>
+  </div>
+
+  <div class='well' id="quotes">
+    <blockquote>
+      <p id="quoteText">
+        Ahoy!
+      </p>
+      <small> <span id='character'> Mr. <a href='https://www.youtube.com/watch?v=qonpElvRu8Q'> Burns </span> <cite id='episode'> picking up the telephone</a></cite></small>
+    </blockquote>
+    <button id='quoteButton' class='btn btn-primary btn-raised'>New Quote</button>
+    <button id='tweetButton' class='btn btn-info'>Tweet Quote</button>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-4">
+      <div class="cardd">
+          <a class="img-card" href="https://www.youtube.com/watch?v=wrC1aMdfa14">
+              <img src="http://vignette1.wikia.nocookie.net/simpsons/images/4/4f/Springfield_Nuclear_Power_Plant_3.png/revision/latest?cb=20100217034419" />
+          </a>
+          <br />
+          <div class="card-content">
+              <h4 class="card-title">Business leader</h4>
+              <div class="">
+                Master of the steal
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-4">
+      <div class="cardd">
+          <a class="img-card" href="https://www.youtube.com/watch?v=1PaxLSxQblM">
+              <img src="https://deadhomersociety.files.wordpress.com/2010/03/twodozenandonegreyhounds4_thumb.png?w=512&h=384" />
+          </a>
+          <br />
+          <div class="card-content">
+              <h4 class="card-title">Rory Calhoun fan</h4>
+              <div class="">
+                Stands on his hind legs
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-4">
+      <div class="cardd">
+          <a class="img-card" href="https://www.youtube.com/watch?v=gmBj8r1-fDo">
+              <img src="https://static.simpsonswiki.com/images/thumb/9/96/Mayo_Clinic_doctor.png/250px-Mayo_Clinic_doctor.png" />
+          </a>
+          <br />
+          <div class="card-content">
+              <h4 class="card-title">Health enthusiast</h4>
+              <div class="">
+                Collector of disease
+              </div>
+          </div>
+      </div>
+  </div>
+
+  </div>
+
+  <div class='well' id='trivia'>
+    <h3> Trivia</h3>
+    <h5> Click on question to toggle answer</h5>
+    <hr />
+    <div class='row' style='margin-top="40px"'>
+      <div class='col-sm-6'>
+        <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="top" data-content="Bobo">Name of his childhood bear?</button>
+      </div>
+      <div class='col-sm-6'>
+        <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="top" data-content="Charles Montgomery">What does 'C.M.' stand for?</button>
+      </div>
+      <div class='col-sm-6'>
+        <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="top" data-content="Pangea"> Place of birth?</button>
+      </div>
+      <div class='col-sm-6'>
+        <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="top" data-content="Larry">Name of his son?</button>
+      </div>
+      <div class='col-sm-6'>
+        <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="top" data-content="Will there ever be a rainbow?">Title of autobiography?</button>
+      </div>
+      <div class='col-sm-6'>
+        <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="top" data-content="Flying Hellfish">Burns' military unit in WWII</button>
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="well">
+    <small>
+      Made as a project for <a href="http://freecodecampe.com/mathewleland">Free Code Camp.</a>
+    </small>
+    <small>
+      See a full list of projects by <a href="http://mhleland.com">Mathew Leland</a>
+    </small>
+  </footer>
+
+</div> <!--container fluid-->
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- tool tip -->
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+
+<script>
+  (function () {
+
+    var $button = $("<div id='source-button' class='btn btn-primary btn-xs'>&lt; &gt;</div>").click(function () {
+      var index = $('.bs-component').index($(this).parent());
+      $.get(window.location.href, function (data) {
+        var html = $(data).find('.bs-component').eq(index).html();
+        html = cleanSource(html);
+        $("#source-modal pre").text(html);
+        $("#source-modal").modal();
+      })
+
+    });
+
+    $('.bs-component [data-toggle="popover"]').popover();
+    $('.bs-component [data-toggle="tooltip"]').tooltip();
+
+    $(".bs-component").hover(function () {
+      $(this).append($button);
+      $button.show();
+    }, function () {
+      $button.hide();
+    });
+
+    function cleanSource(html) {
+      var lines = html.split(/\n/);
+
+      lines.shift();
+      lines.splice(-1, 1);
+
+      var indentSize = lines[0].length - lines[0].trim().length,
+          re = new RegExp(" {" + indentSize + "}");
+
+      lines = lines.map(function (line) {
+        if (line.match(re)) {
+          line = line.substring(indentSize);
+        }
+
+        return line;
+      });
+
+      lines = lines.join("\n");
+
+      return lines;
+    }
+
+    $(".icons-material .icon").each(function () {
+      $(this).after("<br><br><code>" + $(this).attr("class").replace("icon ", "") + "</code>");
+    });
+
+  })();
+
+</script>
+<script src="material/dist/js/ripples.min.js"></script>
+<script src="material/dist/js/material.min.js"></script>
+<script src="js/burns.js"></script>
+<script> $(function() {$.material.init(); }); </script>
+</body>
+
+
+</html>
