@@ -1,6 +1,10 @@
-var randomNum;
+const quoteText = document.getElementById("quoteText");
+const character = document.getElementById("character");
+const episode = document.getElementById("episode");
+const quoteButton = document.getElementById("quoteButton");
+const tweetButton = document.getElementById("tweetButton");
 
-var quotes = [
+const quotes = [
   [
     "Friends, Family, Religion. These are the demons you must slay in order to succeed in business.",
     "Mr. Burns",
@@ -38,28 +42,32 @@ var quotes = [
   ]
 ];
 
-var quoteText = document.getElementById("quoteText");
-var character = document.getElementById("character");
-var episode = document.getElementById("episode");
-var quoteButton = document.getElementById("quoteButton");
-var tweetButton = document.getElementById("tweetButton");
+// phased these named functions out so that I could practice using arrow functions in ES6
+// const generateQuote = function() {
+//   let newRandom = Math.floor(Math.random() * (quotes.length));
+//   if (newRandom == randomNum) generateQuote();
+//   randomNum = newRandom;
+//   quoteText.innerHTML = quotes[randomNum][0];
+//   character.innerHTML = quotes[randomNum][1];
+//   episode.innerHTML = quotes[randomNum][2];
+//   console.log("button was pressed");
+// };
+//
+// const generateTweet = function() {
+//   window.open("http://twitter.com/home/?status=" + quoteText.innerHTML + "  --Mr. Burns");
+// }
 
-var generateQuote = function() {
-  var newRandom = Math.floor(Math.random() * (quotes.length));
-  if (newRandom == randomNum) generateQuote();
+quoteButton.addEventListener("click", () => {
+  let newRandom = Math.floor(Math.random() * (quotes.length));
   randomNum = newRandom;
   quoteText.innerHTML = quotes[randomNum][0];
   character.innerHTML = quotes[randomNum][1];
   episode.innerHTML = quotes[randomNum][2];
   console.log("button was pressed");
-};
-
-var generateTweet = function() {
+});
+tweetButton.addEventListener("click", () => {
   window.open("http://twitter.com/home/?status=" + quoteText.innerHTML + "  --Mr. Burns");
-}
-
-quoteButton.addEventListener("click", generateQuote);
-tweetButton.addEventListener("click", generateTweet);
+});
 
 $(document).ready(function(){
     $('[data-toggle="popover"]').popover();
